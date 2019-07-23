@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Button from "react-bootstrap/Button";
+import Carousel from "react-bootstrap/Button";
 
 export class FetchData extends React.Component {
   constructor(props) {
@@ -30,7 +32,13 @@ export class FetchData extends React.Component {
       return (
         <ul>
           {items.articles.map(item => (
-            <li key={item.id}>{item.title}</li>
+            <p key={item.id}>
+              {item.title}
+
+              <a href={item.url} target="_blank">
+                <img class="testImage" src={item.urlToImage} />
+              </a>
+            </p>
           ))}
           ;
         </ul>
