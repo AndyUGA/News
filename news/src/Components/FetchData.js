@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Button from "react-bootstrap/Button";
-import Carousel from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 export class FetchData extends React.Component {
   constructor(props) {
@@ -30,18 +30,19 @@ export class FetchData extends React.Component {
       return <div> Loading... </div>;
     } else {
       return (
-        <ul>
+        <div>
+          <Button variant="primary">Primary</Button>
           {items.articles.map(item => (
-            <p key={item.id}>
-              {item.title}
-
-              <a href={item.url} target="_blank">
-                <img class="testImage" src={item.urlToImage} />
-              </a>
-            </p>
+            <Card class="testCard">
+              <Card.Img class="testImage" variant="top" src={item.urlToImage} />
+              <Card.Body>
+                <Card.Title>{item.title}</Card.Title>
+                <Card.Text>{item.content}</Card.Text>
+              </Card.Body>
+            </Card>
           ))}
           ;
-        </ul>
+        </div>
       );
     }
   }

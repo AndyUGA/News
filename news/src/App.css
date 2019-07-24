@@ -1,27 +1,22 @@
 .App {
   text-align: center;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+div > p {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div > p > img {
+  background-color: green;
 }
 
 .testImage {
-  width: 20%;
-  margin-left: 50%;
-  margin-right: 50%;
+  width: 20vw;
+  height: 20vh;
+}
+
+.Card {
+  width: 20rem;
 }
